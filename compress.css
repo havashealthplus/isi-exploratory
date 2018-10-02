@@ -7,10 +7,10 @@
 	bottom: 0;
 	background: #f8f8f8;
 	box-shadow: 0 0 15px rgba(0,0,0,.2);
-	-webkit-animation: 2s slide 1s;
-  -moz-animation: 2s slide 1s;
-  -o-animation: 2s slide 1s;
-  animation: 2s slide 1s;
+	-webkit-animation: 2s compress 1s;
+  -moz-animation: 2s compress 1s;
+  -o-animation: 2s compress 1s;
+  animation: 2s compress 1s;
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
@@ -19,19 +19,19 @@
 	padding: 0 15px;
 }
 
-@-webkit-keyframes slide {
+@-webkit-keyframes compress {
   0%   { height:   150px; }
   100% { height: 100px; }
 }
-@-moz-keyframes slide {
+@-moz-keyframes compress {
   0%   { height:   150px; }
   100% { height: 100px; }
 }
-@-o-keyframes slide {
+@-o-keyframes compress {
   0%   { height:   150px; }
   100% { height: 100px; }
 }
-@keyframes slide {
+@keyframes compress {
   0%   { height:   150px; }
   100% { height: 100px; }
 }
