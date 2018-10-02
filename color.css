@@ -11,5 +11,16 @@
 }
 
 .isi-inner {
-	padding: 0 15px;
+	padding: 10px 15px;
+}
+
+.isi-inner .font-medium {
+  line-height: 0;
+  display: inline;
+  float: left;
+}
+
+.plus {
+	float: right;
+	display: inline;
 }

@@ -15,6 +15,10 @@
 	padding: 0 15px;
 }
 
+.isi-inner .font-medium {
+  line-height: 15px;
+}
+
 @-webkit-keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     -webkit-transform: translateY(0); 

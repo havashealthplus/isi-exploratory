@@ -1,14 +1,32 @@
+/* general */
+@-ms-viewport {
+  width: device-width;
+}
+
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 html,
 body {
   height: 100%;
   width: 100%;
   margin: 0;
+  padding: 0;
   background: #ffffff;
   font-family: sans-serif;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 /* back button */
@@ -28,45 +46,40 @@ a {
   box-shadow: 0 0 15px rgba(0,0,0,.2);
 }
 
-/* center home page */
-.center {
-  height: 100%;
-  max-width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.cetner-inner {
-  background: black;
-  color: white;
-  width: 100%;
-  padding: 20px;
-  resize: both;
-  overflow: auto;
-}
-
 /* buttons */
 .button {
-  display: inline-block;
-  margin: 25px;
-  padding: 15px 25px;
+  display: block;
+  margin-bottom: 30px;
+  padding: 25px 0;
   background: #f33;
   border-radius: 6px;
   box-shadow: 0 0 15px rgba(0,0,0,.2);
   color: #fff;
+  text-align: center;
 }
 
-/* container */
+/* headline */
+.headline {
+  color: #0071ce;
+}
+
+/* margins */
 .container {
   width: 100%;
-  padding-right: 32px;
-  padding-left: 32px;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-top: 100px;
   margin-right: auto;
   margin-left: auto;
 }
 
-/* small */
+@media (min-width: 360px) {
+  .container {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+}
+
 @media (min-width: 400px) {
   .container {
     padding-right: 36px;
@@ -83,12 +96,19 @@ a {
 
 @media (min-width: 560px) {
   .container {
-    padding-right: 36px;
-    padding-left: 36px;
+    margin-top: 0;
+    padding-right: 44px;
+    padding-left: 44px;
   }
 }
 
-/* medium */
+@media (min-width: 640px) {
+  .container {
+    padding-right: 44px;
+    padding-left: 44px;
+  }
+}
+
 @media (min-width: 720px) {
   .container {
     padding-right: 44px;
@@ -98,41 +118,39 @@ a {
 
 @media (min-width: 800px) {
   .container {
-    padding-right: 44px;
-    padding-left: 44px;
+    padding-right: 48px;
+    padding-left: 48px;
   }
 }
 
 @media (min-width: 960px) {
   .container {
-    padding-right: 44px;
-    padding-left: 44px;
+    padding-right: 52px;
+    padding-left: 52px;
   }
 }
 
-/* large */
 @media (min-width: 1120px) {
   .container {
-    padding-right: 56px;
-    padding-left: 56px;
+    padding-right: 88px;
+    padding-left: 88px;
   }
 }
 
 @media (min-width: 1280px) {
   .container {
-    padding-right: 64px;
-    padding-left: 64px;
+    padding-right: 92px;
+    padding-left: 92px;
   }
 }
 
 @media (min-width: 1440px) {
   .container {
-    padding-right: 68px;
-    padding-left: 68px;
+    padding-right: 96px;
+    padding-left: 96px;
   }
 }
 
-/* extra large */
 @media (min-width: 1600px) {
   .container {
     padding-right: 100px;
@@ -170,40 +188,82 @@ a {
 
 @media (min-width: 2400px) {
   .container {
-    padding-right: 128px;
-    padding-left: 128px;
+    padding-right: 152px;
+    padding-left: 152px;
   }
 }
 
 @media (min-width: 2560px) {
   .container {
-    padding-right: 132px;
-    padding-left: 132px;
+    padding-right: 156px;
+    padding-left: 156px;
   }
 }
 
 @media (min-width: 2720px) {
   .container {
-    padding-right: 136px;
-    padding-left: 136px;
+    padding-right: 160px;
+    padding-left: 160px;
   }
 }
 
 @media (min-width: 2880px) {
   .container {
-    padding-right: 140px;
-    padding-left: 140px;
+    padding-right: 168px;
+    padding-left: 168px;
   }
 }
 
-/* grid */
+@media (min-width: 3040px) {
+  .container {
+    padding-right: 172px;
+    padding-left: 172px;
+  }
+}
+
+@media (min-width: 3200px) {
+  .container {
+    padding-right: 176px;
+    padding-left: 176px;
+  }
+}
+
+@media (min-width: 3360px) {
+  .container {
+    padding-right: 180px;
+    padding-left: 180px;
+  }
+}
+
+@media (min-width: 3520px) {
+  .container {
+    padding-right: 184px;
+    padding-left: 184px;
+  }
+}
+
+@media (min-width: 3680px) {
+  .container {
+    padding-right: 192px;
+    padding-left: 192px;
+  }
+}
+
+@media (min-width: 3840px) {
+  .container {
+    padding-right: 196px;
+    padding-left: 196px;
+  }
+}
+
+/* container rows */
 .row {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -13px;
-  margin-left: -13px;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 .no-margin {
@@ -222,6 +282,15 @@ a {
   padding-left: 0;
 }
 
+.mx-auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.inline {
+  display: inline !important;
+}
+
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
 .col-auto, .col-small-1, .col-small-2, .col-small-3, .col-small-4, .col-small-5, .col-small-6, .col-small-7, .col-small-8, .col-small-9, .col-small-10, .col-small-11, .col-small-12, .col-sm,
 .col-small-auto, .col-medium-1, .col-medium-2, .col-medium-3, .col-medium-4, .col-medium-5, .col-medium-6, .col-medium-7, .col-medium-8, .col-medium-9, .col-medium-10, .col-medium-11, .col-medium-12, .col-md,
@@ -231,8 +300,8 @@ a {
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 13px;
-  padding-left: 13px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .col {
@@ -441,7 +510,7 @@ a {
   margin-left: 91.666667%;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 560px) {
   .col-small {
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
@@ -613,7 +682,7 @@ a {
   }
 }
 
-@media (min-width: 720px) {
+@media (min-width: 1120px) {
   .col-medium {
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
@@ -785,7 +854,7 @@ a {
   }
 }
 
-@media (min-width: 1120px) {
+@media (min-width: 1600px) {
   .col-large {
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
@@ -957,7 +1026,7 @@ a {
   }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 2400px) {
   .col-extra-large {
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
@@ -1132,40 +1201,40 @@ a {
 /* fonts */
  @font-face {
   font-family: 'Rokkitt-Light';
-  src: url('../webfonts/Rokkitt-Light.eot');
-  src: url('../webfonts/Rokkitt-Light.woff') format('woff'),
-       url('../webfonts/Rokkitt-Light.ttf') format('truetype'),
-       url('../webfonts/Rokkitt-Light.eot?#iefix') format('embedded-opentype');
+  src: url('webfonts/Rokkitt-Light.eot');
+  src: url('webfonts/Rokkitt-Light.woff') format('woff'),
+       url('webfonts/Rokkitt-Light.ttf') format('truetype'),
+       url('webfonts/Rokkitt-Light.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Montserrat-Bold';
-  src: url('../webfonts/Montserrat-Bold.eot');
-  src: url('../webfonts/Montserrat-Bold.woff') format('woff'),
-       url('../webfonts/Montserrat-Bold.ttf') format('truetype'),
-       url('../webfonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype');
+  src: url('webfonts/Montserrat-Bold.eot');
+  src: url('webfonts/Montserrat-Bold.woff') format('woff'),
+       url('webfonts/Montserrat-Bold.ttf') format('truetype'),
+       url('webfonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Montserrat-Regular';
-  src: url('../webfonts/Montserrat-Regular.eot');
-  src: url('../webfonts/Montserrat-Regular.woff') format('woff'),
-       url('../webfonts/Montserrat-Regular.ttf') format('truetype'),
-       url('../webfonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype');
+  src: url('webfonts/Montserrat-Regular.eot');
+  src: url('webfonts/Montserrat-Regular.woff') format('woff'),
+       url('webfonts/Montserrat-Regular.ttf') format('truetype'),
+       url('webfonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Montserrat-Light';
-  src: url('../webfonts/Montserrat-Light.eot');
-  src: url('../webfonts/Montserrat-Light.woff') format('woff'),
-       url('../webfonts/Montserrat-Light.ttf') format('truetype'),
-       url('../webfonts/Montserrat-Light.eot?#iefix') format('embedded-opentype');
+  src: url('webfonts/Montserrat-Light.eot');
+  src: url('webfonts/Montserrat-Light.woff') format('woff'),
+       url('webfonts/Montserrat-Light.ttf') format('truetype'),
+       url('webfonts/Montserrat-Light.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -1622,20 +1691,6 @@ a {
     line-height: 136px;
   }
 }
-
-.bold {
-  font-family: 'Montserrat-Bold';
-  text-transform: uppercase;
-}
-
-.rokk {
-  font-family: 'Rokkitt-Light';
-}
-
-
-
-
-
 
 
 

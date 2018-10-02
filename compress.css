@@ -19,6 +19,10 @@
 	padding: 0 15px;
 }
 
+.isi-inner .font-medium {
+  line-height: 15px;
+}
+
 @-webkit-keyframes compress {
   0%   { height:   150px; }
   100% { height: 100px; }
